@@ -30,7 +30,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "samd21_ptc_component.h"
+#include "samd_ptc_component.h"
 
 #ifdef __cplusplus
 extern "C" {

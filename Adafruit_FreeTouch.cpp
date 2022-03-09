@@ -150,6 +150,17 @@ int Adafruit_FreeTouch::getYLine(void) {
     if ((p >= 2) && (p <= 7)) {
       return (p - 2);
     }
+    #ifdef SAMD11
+    if ((p >= 14) && (p <= 15)) {
+      return (p - 8);
+    }
+    if ((p >= 16) && (p <= 17)) {
+      return (p - 6);
+    }
+    if ((p >= 22) && (p <= 25)) {
+      return (p - 10);
+    }
+    #endif
   }
   if (g_APinDescription[pin].ulPort == PORTB) {
     if ((p >= 0) && (p <= 9)) {
