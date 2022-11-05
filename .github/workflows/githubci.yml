@@ -10,7 +10,8 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
-    - uses: actions/checkout@v2
+    - name: list stuff
+      run: ls -al .
     - uses: actions/checkout@v2
       with:
          repository: adafruit/ci-arduino
