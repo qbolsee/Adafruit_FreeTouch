@@ -79,9 +79,9 @@ typedef union {
 
 /*************** CTRL C register ***************/
 #if (SAMD11)
-    #define PTC_REG_CTRLC 0x42002C05
+#define PTC_REG_CTRLC 0x42002C05
 #else
-    #define PTC_REG_CTRLC 0x42004C05
+#define PTC_REG_CTRLC 0x42004C05
 #endif
 #define PTC_BIT_INIT 0x01
 
