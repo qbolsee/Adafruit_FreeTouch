@@ -31,7 +31,7 @@
 #include "sam.h"
 
 /*************** CTRL A register ***************/
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_CTRLA 0x42002C00
 #else
     #define PTC_REG_CTRLA 0x42004C00
@@ -51,7 +51,7 @@ typedef union {
 
 /*************** CTRL B register ***************/
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_CTRLB 0x42002C01
 #else
     #define PTC_REG_CTRLB 0x42004C01
@@ -68,7 +68,7 @@ typedef union {
 
 /*************** UNK4C04 register ***************/
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_UNK4C04 0x42002C04
 #else
     #define PTC_REG_UNK4C04 0x42004C04
@@ -78,7 +78,7 @@ typedef union {
 } PTC_REG_UNK4C04_Type;
 
 /*************** CTRL C register ***************/
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_CTRLC 0x42002C05
 #else
     #define PTC_REG_CTRLC 0x42004C05
@@ -104,7 +104,7 @@ typedef union {
   uint8_t reg;
 } PTC_REG_INT_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_INTDISABLE 0x42002C08
     #define PTC_REG_INTENABLE 0x42002C09
 #else
@@ -114,7 +114,7 @@ typedef union {
 #define PTC_BIT_EOCINTEN 0x01
 #define PTC_BIT_WCOINTEN 0x02
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_INTFLAGS 0x42002C0A
 #else
     #define PTC_REG_INTFLAGS 0x42004C0A
@@ -133,7 +133,7 @@ typedef union {
   uint8_t reg;
 } PTC_REG_FREQCTRL_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_FREQCTRL 0x42002C0C
 #else
     #define PTC_REG_FREQCTRL 0x42004C0C
@@ -152,7 +152,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_CONVCTRL_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_CONVCTRL 0x42002C0D
 #else
     #define PTC_REG_CONVCTRL 0x42004C0D
@@ -190,7 +190,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_YSELECTH_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_YSELECT_L 0x42002C10
     #define PTC_REG_YSELECT_H 0x42002C11
 #else
@@ -198,7 +198,7 @@ typedef union {
     #define PTC_REG_YSELECT_H 0x42004C11
 #endif
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_YENABLE_L 0x42002C14
     #define PTC_REG_YENABLE_H 0x42002C15
 #else
@@ -236,7 +236,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_XSELECTH_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_XSELECT_L 0x42002C12
     #define PTC_REG_XSELECT_H 0x42002C13
 #else
@@ -244,7 +244,7 @@ typedef union {
     #define PTC_REG_XSELECT_H 0x42004C13
 #endif
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_XENABLE_L 0x42002C16
     #define PTC_REG_XENABLE_H 0x42002C17
 #else
@@ -269,7 +269,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_COMPCAPH_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_COMPCAPL 0x42002C18
     #define PTC_REG_COMPCAPH 0x42002C19
 #else
@@ -287,7 +287,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_INTCAP_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_INTCAP 0x42002C1A
 #else
     #define PTC_REG_INTCAP 0x42004C1A
@@ -303,7 +303,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_SERRES_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_SERIESRES 0x42002C1B
 #else
     #define PTC_REG_SERIESRES 0x42004C1B
@@ -319,7 +319,7 @@ typedef union {
   uint16_t reg;
 } __attribute__((packed)) PTC_REG_CONVRESULT_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_CONVRESULT_L 0x42002C1C
     #define PTC_REG_CONVRESULT_H 0x42002C1D
 #else
@@ -339,7 +339,7 @@ typedef union {
   uint8_t reg;
 } __attribute__((packed)) PTC_REG_BURSTMODE_Type;
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_BURSTMODE 0x42002C20
 #else
     #define PTC_REG_BURSTMODE 0x42004C20
@@ -349,21 +349,21 @@ typedef union {
 
 /*************** etc unused reg ***************/
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_XYENABLE 0x42002C16
 #else
     #define PTC_REG_XYENABLE 0x42004C16
 #endif
 #define PTC_BIT_XYENABLE 0x02
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_WCO_MODE 0x42002C21
 #else
     #define PTC_REG_WCO_MODE 0x42004C21
 #endif
 #define PTC_REG_WCO_MODE_MASK 0x07
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_SET_WCO_THRESHHOLD_A_L 0x42002C24
     #define PTC_SET_WCO_THRESHHOLD_A_H 0x42002C25
     #define PTC_SET_WCO_THRESHHOLD_B_L 0x42002C26
@@ -413,14 +413,14 @@ typedef struct {
 } Ptc;
 
 #ifndef PTC
-    #ifdef SAMD11
+    #if (SAMD11)
         #define PTC ((Ptc *)0x42002C00U)
     #else
         #define PTC ((Ptc *)0x42004C00U)
     #endif
 #endif
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_INTDISABLE 0x42002C08
     #define PTC_REG_INTENABLE 0x42002C09
 #else
@@ -430,7 +430,7 @@ typedef struct {
 #define PTC_BIT_EOCINTEN 0x01
 #define PTC_BIT_WCOINTEN 0x02
 
-#ifdef SAMD11
+#if (SAMD11)
     #define PTC_REG_INTFLAGS 0x42002C0A
 #else
     #define PTC_REG_INTFLAGS 0x42004C0A

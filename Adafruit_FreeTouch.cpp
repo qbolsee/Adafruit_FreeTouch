@@ -150,7 +150,7 @@ int Adafruit_FreeTouch::getYLine(void) {
     if ((p >= 2) && (p <= 7)) {
       return (p - 2);
     }
-    #ifdef SAMD11
+    #if (SAMD11)
     if ((p >= 14) && (p <= 15)) {
       return (p - 8);
     }
