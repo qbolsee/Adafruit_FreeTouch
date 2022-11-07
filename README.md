@@ -4,7 +4,7 @@ A QTouch-compatible library for SAMD11 or SAMD21.
 
 ## Minimal example
 
-Here's code to include
+Here's code to enable QTouch on pin PA15 and read measurements in the loop():
 
 ```
 #include "Adafruit_FreeTouch.h"
